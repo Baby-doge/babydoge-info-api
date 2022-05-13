@@ -3,7 +3,7 @@
   "schemaPath": "schema.graphql",
   "extensions": {
     "endpoints": {
-      "Binance Smart Chain Blocks": {
+      "BabyDoge Blocks Subgraph": {
         "url": "https://graph-bsc-mainnet.babydoge.com/subgraphs/name/babydoge/blocks",
         "headers": {
           "user-agent": "JS GraphQL"
