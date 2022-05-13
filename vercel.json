@@ -1,6 +1,13 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/api/version",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/api/tokens",

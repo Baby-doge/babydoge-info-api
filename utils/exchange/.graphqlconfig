@@ -1,10 +1,10 @@
 {
-  "name": "PancakeSwap Exchange LITE",
+  "name": "BabyDoge Exchange Subgraph",
   "schemaPath": "schema.graphql",
   "extensions": {
     "endpoints": {
-      "PancakeSwap Exchange LITE": {
-        "url": "https://api.bscgraph.org/subgraphs/name/pancakeswap/exchange-lite",
+      "BabyDoge Exchange Subgraph": {
+        "url": "https://graph-bsc-mainnet.babydoge.com/subgraphs/name/babydoge/exchange",
         "headers": {
           "user-agent": "JS GraphQL"
         },

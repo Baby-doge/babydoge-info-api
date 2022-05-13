@@ -16,6 +16,12 @@ Results are cached for 5 minutes (or 300 seconds).
 yarn global add vercel
 ```
 
+### Configure Blacklist
+
+You can configure (create/update/delete) the blacklist by editing the file located [here](utils/constants/blacklist.ts).
+
+> Note: All blacklisted tokens addresses must be LOWERCASE.
+
 ### Install dependencies
 ```shell
 yarn install --frozen-lockfile
@@ -48,26 +54,19 @@ Response:
 }
 ```
 
+### 2. Summary
 
+> Returns data for the top BabyDogeSwap pairs, sorted by reserves.
 
+Request:
+```shell
+$ curl -X GET https://info-api.babydoge.com/api/summary
+```
 
-
-
-# TODO fix below
-
-## [`/v2/summary`](https://api.pancakeswap.info/api/v2/summary)
-
-Returns data for the top ~1000 PancakeSwap pairs, sorted by reserves. 
-
-### Request
-
-`GET https://api.pancakeswap.info/api/v2/summary`
-
-### Response
-
+Response:
 ```json5
 {
-  "updated_at": 1234567,              // UNIX timestamp
+  "updated_at": 1234567890,           // UNIX timestamp
   "data": {
     "0x..._0x...": {                  // BEP20 token addresses, joined by an underscore
       "price": "...",                 // price denominated in token1/token0
@@ -81,19 +80,19 @@ Returns data for the top ~1000 PancakeSwap pairs, sorted by reserves.
 }
 ```
 
-## [`/v2/tokens`](https://api.pancakeswap.info/api/v2/tokens)
+### 3. Tokens
 
-Returns the tokens in the top ~1000 pairs on PancakeSwap, sorted by reserves.
+> Returns the tokens in the top BabyDogeSwap pairs, sorted by reserves.
 
-### Request
+Request:
+```shell
+$ curl -X GET https://info-api.babydoge.com/api/tokens
+```
 
-`GET https://api.pancakeswap.info/api/v2/tokens`
-
-### Response
-
+Response:
 ```json5
 {
-  "updated_at": 1234567,              // UNIX timestamp
+  "updated_at": 1234567890,           // UNIX timestamp
   "data": {
     "0x...": {                        // the address of the BEP20 token
       "name": "...",                  // not necessarily included for BEP20 tokens
@@ -106,19 +105,19 @@ Returns the tokens in the top ~1000 pairs on PancakeSwap, sorted by reserves.
 }
 ```
 
-## [`/v2/tokens/0x...`](https://api.pancakeswap.info/api/v2/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82)
+### 4. Token Information
 
-Returns the token information, based on address.
+> Returns the token information, based on address.
 
-### Request
+Request:
+```shell
+$ curl -X GET https://info-api.babydoge.com/api/tokens/0xbA2aE424d960c26247Dd6c32edC70B295c744C43
+```
 
-`GET https://api.pancakeswap.info/api/v2/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82`
-
-### Response
-
+Response:
 ```json5
 {
-  "updated_at": 1234567,              // UNIX timestamp
+  "updated_at": 1234567890,           // UNIX timestamp
   "data": {
     "name": "...",                    // not necessarily included for BEP20 tokens
     "symbol": "...",                  // not necessarily included for BEP20 tokens
@@ -128,19 +127,19 @@ Returns the token information, based on address.
 }
 ```
 
-## [`/v2/pairs`](https://api.pancakeswap.info/api/v2/pairs)
+### 5. Pairs
 
-Returns data for the top ~1000 PancakeSwap pairs, sorted by reserves.
+> Returns data for the top BabyDogeSwap pairs, sorted by reserves.
 
-### Request
+Request:
+```shell
+$ curl -X GET https://info-api.babydoge.com/api/pairs
+```
 
-`GET https://api.pancakeswap.info/api/v2/pairs`
-
-### Response
-
+Response:
 ```json5
 {
-  "updated_at": 1234567,              // UNIX timestamp
+  "updated_at": 1234567890,           // UNIX timestamp
   "data": {
     "0x..._0x...": {                  // the asset ids of BNB and BEP20 tokens, joined by an underscore
       "pair_address": "0x...",        // pair address

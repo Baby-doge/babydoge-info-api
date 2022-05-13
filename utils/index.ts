@@ -1,7 +1,7 @@
 import BigNumber from "bignumber.js";
 import { BLACKLIST } from "./constants/blacklist";
-import { client } from "./apollo/client";
-import { TOP_PAIRS, PAIRS_VOLUME_QUERY, TOKEN_BY_ADDRESS } from "./apollo/queries";
+import { client } from "./exchange/client";
+import { TOP_PAIRS, PAIRS_VOLUME_QUERY, TOKEN_BY_ADDRESS } from "./exchange/queries";
 import { getBlockFromTimestamp } from "./blocks/queries";
 import {
   PairsVolumeQuery,
