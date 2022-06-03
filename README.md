@@ -37,7 +37,6 @@ vercel dev
 Deploy to production should be triggered by a webhook when a commit, or a pull-request is merged to `bsc-mainnet`.
 
 If you need to force a deployment, use the following command:
-
 ```shell
 vercel --prod
 ```
