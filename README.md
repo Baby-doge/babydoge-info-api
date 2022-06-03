@@ -29,12 +29,22 @@ yarn install --frozen-lockfile
 
 ### Build project
 ```shell
-setsid vercel dev
+vercel dev
+```
+
+## Production Deployment
+
+Deploy to production should be triggered by a webhook when a commit, or a pull-request is merged to `bsc-mainnet`.
+
+If you need to force a deployment, use the following command:
+
+```shell
+vercel --prod
 ```
 
 ## Endpoints Usage
 
-Base endpoint: [info-api.babydoge.com](https://info-api.babydoge.com)
+Base endpoint: [babydoge-info-api-bsc-mainnet.vercel.app](https://babydoge-info-api-bsc-mainnet.vercel.app)
 
 All endpoints are based on filename inside the `api/` folder.
 
@@ -44,7 +54,7 @@ All endpoints are based on filename inside the `api/` folder.
 
 Request:
 ```shell
-$ curl -X GET https://info-api.babydoge.com/api/version
+$ curl -X GET https://babydoge-info-api-bsc-mainnet.vercel.app/api/version
 ```
 
 Response:
@@ -60,7 +70,7 @@ Response:
 
 Request:
 ```shell
-$ curl -X GET https://info-api.babydoge.com/api/summary
+$ curl -X GET https://babydoge-info-api-bsc-mainnet.vercel.app/api/summary
 ```
 
 Response:
@@ -86,7 +96,7 @@ Response:
 
 Request:
 ```shell
-$ curl -X GET https://info-api.babydoge.com/api/tokens
+$ curl -X GET https://babydoge-info-api-bsc-mainnet.vercel.app/api/tokens
 ```
 
 Response:
@@ -111,7 +121,7 @@ Response:
 
 Request:
 ```shell
-$ curl -X GET https://info-api.babydoge.com/api/tokens/0xbA2aE424d960c26247Dd6c32edC70B295c744C43
+$ curl -X GET https://babydoge-info-api-bsc-mainnet.vercel.app/api/tokens/0xbA2aE424d960c26247Dd6c32edC70B295c744C43
 ```
 
 Response:
@@ -133,7 +143,7 @@ Response:
 
 Request:
 ```shell
-$ curl -X GET https://info-api.babydoge.com/api/pairs
+$ curl -X GET https://babydoge-info-api-bsc-mainnet.vercel.app/api/pairs
 ```
 
 Response:
