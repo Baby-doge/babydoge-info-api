@@ -1,0 +1,17 @@
+on:
+  pull_request:
+    types: [ready_for_review]
+
+jobs:
+  create-comment-in-asana-task-job:
+    runs-on: ubuntu-latest
+    name: Create a comment in Asana Task
+    steps:
+      - name: Create a comment
+        uses: Asana/comment-on-task-github-action@latest
+        id: createComment
+        with:
+          asana-secret: ${{ secrets.ASANA_SECRET }}
+          comment-text: "GitHub Pull Request '{{PR_NAME}}' is ready for review: {{PR_URL}}"
+      - name: Get status
+        run: echo "Status is ${{ steps.createComment.outputs.status }}"
