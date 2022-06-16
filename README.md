@@ -1,7 +1,8 @@
 # BabyDoge Info API
 
-The BabyDoge Info API is a set of endpoints used by market aggregators (e.g. coingecko.com) to surface BabyDogeSwap liquidity
-and volume information. All information is fetched from the underlying subgraphs.
+## Project description
+
+The 'BabyDoge Info API' project defines serverless API implementation used by market aggregators (e.g. coingecko.com) to surface BabyDogeSwap liquidity and volume information. All information is fetched from the underlying subgraphs.
 
 All BabyDogeSwap pairs consist of two different tokens. BNB is not a native currency in BabyDogeSwap, and is represented only by WBNB in the pairs. 
 
