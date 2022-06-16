@@ -1,6 +1,8 @@
+name: Asana Integration PR Converted to draft
+
 on:
   pull_request:
-    types: [ready_for_review]
+    types: [converted_to_draft]
 
 jobs:
   create-comment-in-asana-task-job:
@@ -12,6 +14,6 @@ jobs:
         id: createComment
         with:
           asana-secret: ${{ secrets.ASANA_SECRET }}
-          comment-text: "GitHub Pull Request '{{PR_NAME}}' is ready for review: {{PR_URL}}"
+          comment-text: "GitHub Pull Request '{{PR_NAME}}' is converted to draft: {{PR_URL}}"
       - name: Get status
         run: echo "Status is ${{ steps.createComment.outputs.status }}"
