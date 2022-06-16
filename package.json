@@ -11,12 +11,6 @@
     "lint": "eslint '*/**/*.{js,ts}'",
     "codegen": "graphql-codegen --config utils/exchange/codegen.yml"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn format:write",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "dependencies": {
     "@apollo/client": "^3.3.13",
     "@ethersproject/address": "^5.1.0",
@@ -25,8 +19,6 @@
     "graphql-tag": "^2.11.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^12.0.1",
-    "@commitlint/config-conventional": "^12.0.1",
     "@graphql-codegen/cli": "^1.21.3",
     "@graphql-codegen/typescript": "^1.17.11",
     "@graphql-codegen/typescript-operations": "^1.17.11",
@@ -36,7 +28,6 @@
     "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.1.0",
     "graphql": "^15.5.0",
-    "husky": "^4.3.8",
     "prettier": "^2.2.1",
     "typescript": "^4.2.3"
   }
