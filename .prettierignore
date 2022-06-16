@@ -1,1 +1,2 @@
+coverage/lcov-report/*.js
 utils/generated/*.ts
